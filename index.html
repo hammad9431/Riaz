@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al-Riaz</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<div class="header-front">
+    <p class="height-fix">
+        2 km Defence Road, 22 km Multan Road, Mohlanwal, Lahore, Pakistan
+    </p>
+
+    <p class="slide-item item1">2 km Defence Road, 22 km Multan Road, Mohlanwal, Lahore, Pakistan</p>
+    <p class="slide-item item2">Contact: 00923008437436,-42-35966647</p>
+    <!-- <p class="slide-item item3">-42-35966647</p> -->
+</div>
+<header class="header">
+    <div class="header-main">
+
+      
+      <div class="logo">
+        <a href="./index.html" >
+        <img src="./assets/images/mainlogo-removebg-preview (2).png" alt="Al-Riaz Knitwear">
+      </a>
+      </div>
+
+     
+      <button class="menu-toggle" id="menuToggle">☰</button>
+
+      <nav class="nav" id="mainNav">
+       
+        <button class="close-btn" id="closeMenu">✖</button>
+
+        <a href="./index.html" class="nav-link">Home<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
+       
+        <a href="./Products.html" class="nav-link">Products<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
+        <a href="./Services.html" class="nav-link">Our Services<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
+        <a href="./About.html" class="nav-link">About Us<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
+        <a href="./Contact.html" class="nav-link">Contact<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
+        <a href="./Documentation.html" class="nav-link">Documentation<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
+      </nav>
+
+    </div>
+  </header>
+
+<body>
+  <div class="carousel-main">
+ <div class="simple-carousel">
+    <div class="carousel-slide active">
+      <div class="banner" style="background-image: url(./assets/images/mainbanner.jpg);">
+        <div class="text-wrapper">
+          <div class="overlay-text">
+         <h3 class="first-text"><b>Casual Shirts</b></h3>
+          </div>
+         <button class="second-text">View Collection</button>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-slide">
+      <div class="banner" style="background-image: url(./assets/images/productsbanner.jpg);">
+        <!-- <div class="text-wrapper">
+          <div class="overlay-text">
+            <h3 class="first-text">CREATIVE SOLUTIONS</h3>
+          </div>
+
+          <button class="second-text">View Collection</button>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="carousel-slide">
+      <div class="banner" style="background-image: url(./assets/images/336.PNG);">
+        <!-- <div class="text-wrapper">
+          <div class="overlay-text">
+            <h3 class="first-text">DESIGN & INNOVATE</h3>
+          </div>
+          <button class="second-text">View Collection</button>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- Navigation buttons -->
+    <button class="prev"><img src="./assets/images/left-chevron.png" alt="left-chevron" style="width: 20px;height: 20px;font-weight: 600;margin-right: 3px;"></button>
+    <button class="next"><img src="./assets/images/right-arrow-angle.png" alt="right-arrow" style="width: 20px;height: 20px;margin-left: 3px;"></button>
+    <div class="pagination"></div>
+  </div>
+</div>
+
+<!-- Products--Cards   -->
+<div class="section">
+  <h2 class="section-title1">SHALWAR KAMEEZ & WAISTCOATS</h2>
+  <hr style="border:1px solid black; width:23%;margin-left: 0px;">
+  <hr style="border:1px solid black; margin-top: -8px;">
+  
+  <div class="products" id="productsContainer">
+    <!-- Cards will be injected here -->
+  </div>
+</div>
+
+
+<!-- CASUAL SHIRTS -->
+<div class="section-header" >
+    <div class="header-left">
+      <h2 class="section-title">Casual Shirts</h2>
+    </div>
+    <div class="header-right">
+      <a href="#" class="view-all">View All</a>
+    </div>
+  </div>
+
+  <!-- CAROUSEL -->
+  <div class="carousel-outer">
+  <div class="carousel-container" id="carouselEl">
+    <div class="shirts-grid" id="gridEl">
+      <!-- Cards will be inserted here via JS -->
+    </div>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="progress-section">
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+</div>
+<!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi est dicta veritatis aspernatur. Placeat ullam nulla pariatur debitis iusto ut dolor, quibusdam quod, quae eveniet modi totam, omnis facere deserunt!</p> -->
+
+  <!-- /* --Green---Slider---3 different---functionality---Start-- */ -->
+   <div class="section-header1">
+  <h2>Shop by Style</h2>
+  <p>From crisp formals to casuals find the look that fits every occasion</p>
+</div>
+
+<div class="slider-section">
+  <div class="slider-track" id="sliderTrack"></div>
+</div>
+
+<!-- Desktop green bar — visible only ≥769px -->
+<div class="desktop-bar" id="desktopBar"></div>
+
+<div class="pagination1" id="pagination1"></div>
+  <!-- /* --Green---Slider---3 different---functionality---End-- */ -->
+
+
+<!-- --WHITE--BUTTON--SLIDER--Start-->
+ <div style="background-color: rgba(244, 248, 248, 0.514)">
+ <div class="testimonial-section">
+
+  <div class="header1">
+    <h2>Our Clients</h2>
+    <p>Trusted by clients, proven by experience.</p>
+  </div>
+
+  <div class="reviews-container" id="reviewsContainer">
+    <div class="reviews-grid" id="reviewsGrid"></div>
+  </div>
+
+  <div class="slider-nav">
+    <button class="nav-btn" id="prevBtn1">
+      <svg viewBox="6 0 12 24" class="arrow">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </button>
+
+    <button class="nav-btn" id="nextBtn1">
+      <svg viewBox="6 0 12 24" class="arrow">
+        <path d="M9 6l6 6-6 6"/>
+      </svg>
+    </button>
+  </div>
+
+</div>
+</div>
+<!-- --WHITE--BUTTON--SLIDER--End-->
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- LOGO + ABOUT -->
+    <div class="footer-col">
+      <img src="./assets/images/mainlogo-removebg-preview (2).png" class="footer-logo">
+      <p>
+        Premium quality knitwear & apparel. Delivering elegance, comfort, and
+        modern style for every occasion.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <!-- <li><a href="./index.html">Home</a></li> -->
+         <li><a href="./index.html" class="active">Home</a></li>
+        <li><a href="./Products.html" >Products</a></li>
+        <li><a href="./Services.html">Services</a></li>
+        <li><a href="./About.html">About Us</a></li>
+        <li><a href="./Contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- CUSTOMER SUPPORT -->
+    <div class="footer-col">
+      <h3>Customer Support</h3>
+      <ul>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Shipping Policy</a></li>
+        <li><a href="#">Returns & Exchange</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-col">
+      <h3>Contact Us</h3>
+      <p>📍 2 km Defence Road, Lahore</p>
+      <p>📞 +92 300 8437436</p>
+      <p>✉️ info@alriaz.com</p>
+
+      <!-- SOCIAL -->
+      <div class="social-icons">
+        <a href="#">A</a>
+        <a href="#">R</a>
+        <a href="#">K</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>© 2026 Al-Riaz Knitwear. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+<!-- Header-heading-script --Start-->
+ 
+<script>
+const items = document.querySelectorAll('.slide-item');
+const container = document.querySelector('.header-front');
+const mainHeader = document.querySelector('.header');
+
+let lastScroll = 0;
+let currentHeight = 0;
+
+// ✅ HEIGHT (multi-line safe)
+function updateHeight() {
+    items.forEach(item => {
+        if (getComputedStyle(item).opacity === "1") {
+            currentHeight = item.scrollHeight + 20;
+        }
+    });
+
+    container.style.height = currentHeight + "px";
+
+    if (!container.classList.contains('header-hidden')) {
+        mainHeader.style.top = currentHeight + "px";
+    } else {
+        mainHeader.style.top = "0px";
+    }
+}
+
+// loop
+function loop() {
+    updateHeight();
+    requestAnimationFrame(loop);
+}
+loop();
+
+
+// ✅ INITIAL LOAD FIX
+window.addEventListener('load', () => {
+    if (window.pageYOffset === 0) {
+        container.classList.remove('header-hidden');
+        mainHeader.style.top = currentHeight + "px";
+    } else {
+        container.classList.add('header-hidden');
+        mainHeader.style.top = "0px";
+    }
+});
+
+window.addEventListener('scroll', () => {
+    let currentScroll = window.pageYOffset;
+
+   if (currentScroll > lastScroll) {
+    // scroll down
+    container.classList.add('header-hidden');
+    mainHeader.classList.remove('hide-bottom', 'show');
+    mainHeader.classList.add('hide-top');
+    setTimeout(() => { mainHeader.classList.add('show'); }, 10);
+
+    triggerHeaderAnim('down'); 
+}
+
+if (currentScroll === 0) {
+    container.classList.remove('header-hidden');
+    mainHeader.classList.remove('hide-top', 'animate-from-top', 'animate-from-bottom');
+    mainHeader.classList.add('show');
+    mainHeader.style.top = currentHeight + "px";
+
+    triggerHeaderAnim('up'); 
+}
+    lastScroll = currentScroll;
+});
+let animTimeout = null;
+let hasAnimatedDown = false; 
+let hasAnimatedUp = true;  
+
+function triggerHeaderAnim(direction) {
+  if (window.innerWidth <= 768) return; 
+
+  if (direction === 'down') {
+    if (hasAnimatedDown) return; 
+    hasAnimatedDown = true;
+    hasAnimatedUp = false;
+  }
+
+  if (direction === 'up') {
+    if (hasAnimatedUp) return; 
+    hasAnimatedUp = true;
+    hasAnimatedDown = false;
+  }
+
+  const animClass = direction === 'down' ? 'animate-from-top' : 'animate-from-bottom';
+
+  mainHeader.classList.remove('animate-from-top', 'animate-from-bottom');
+  void mainHeader.offsetWidth;
+  mainHeader.classList.add(animClass);
+
+  clearTimeout(animTimeout);
+  animTimeout = setTimeout(() => {
+    mainHeader.classList.remove('animate-from-top', 'animate-from-bottom');
+  }, 600);
+}
+</script>
+
+ <!-- HEADER --- TOGGLE--OPEN--Start -->
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const closeMenu = document.getElementById("closeMenu");
+    const nav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", () => {
+      nav.classList.add("show");
+    });
+
+    closeMenu.addEventListener("click", () => {
+      nav.classList.remove("show");
+    });
+  </script>
+
+  <script>
+    const currentPage =
+      window.location.pathname.split("/").pop() || "index.html";
+
+    document.querySelectorAll(".nav-link").forEach(link => {
+      const linkPage = link.getAttribute("href").replace("./", "");
+
+      if (linkPage === currentPage) {
+        link.classList.add("active");
+      }
+    });
+    
+  </script>
+ <!-- HEADER --- TOGGLE--OPEN--END -->
+<!-- BACKGROUNG--IAGE---START -->
+   <script>
+const slides = document.querySelectorAll(".carousel-slide");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+const pagination = document.querySelector(".pagination");
+
+let currentIndex = 0;
+
+slides.forEach((_, index) => {
+  const dot = document.createElement("div");
+  dot.classList.add("dot");
+
+  dot.addEventListener("click", () => {
+    currentIndex = index;
+    showSlide(currentIndex);
+  });
+
+  pagination.appendChild(dot);
+});
+
+const dots = document.querySelectorAll(".dot");
+
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove("active"));
+  dots.forEach(dot => dot.classList.remove("active"));
+
+  slides[index].classList.add("active");
+  dots[index].classList.add("active");
+}
+
+// next / prev
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  showSlide(currentIndex);
+}
+
+nextBtn.addEventListener("click", nextSlide);
+prevBtn.addEventListener("click", prevSlide);
+
+setInterval(nextSlide, 4000);
+
+showSlide(currentIndex);
+</script>
+
+<!-- ---8--Cards---Start--- -->
+
+<script>
+  // ✅ Array of product objects
+  const products = [
+    {
+      imgMain: "./assets/images/67.png",
+      title: "Grey Sovereign Shalwar Kameez",
+      price: "Rs.8,950",
+      tag: "New",
+      sizes: ["S","M","XL"]
+    },
+    {
+      imgMain: "./assets/images/60.png",
+      title: "Sky Blue Heritage Shalwar Kameez",
+      price: "Rs.8,950",
+      tag: "",
+      sizes: ["S","M","XL"]
+    },
+    {
+      imgMain: "./assets/images/67.png",
+      title: "Grey Sovereign Shalwar Kameez",
+      price: "Rs.8,950",
+      tag: "New",
+      sizes: ["S","M","XL"]
+    },
+    {
+      imgMain: "./assets/images/60.png",
+      title: "Sky Blue Heritage Shalwar Kameez",
+      price: "Rs.8,950",
+      tag: "",
+      sizes: ["S","M","XL"]
+    },
+    {
+      imgMain: "./assets/images/60.png",
+      title: "Sky Blue Heritage Shalwar Kameez",
+      price: "Rs.8,950",
+      tag: "",
+      sizes: ["S","M","XL"]
+    },
+     {
+      imgMain: "./assets/images/67.png",
+      title: "Grey Sovereign Shalwar Kameez",
+      price: "Rs.8,950",
+      tag: "New",
+      sizes: ["S","M","XL"]
+    },
+    {
+      imgMain: "./assets/images/60.png",
+      title: "Sky Blue Heritage Shalwar Kameez",
+      price: "Rs.8,950",
+      tag: "",
+      sizes: ["S","M","XL"]
+    },
+     {
+      imgMain: "./assets/images/67.png",
+      title: "Grey Sovereign Shalwar Kameez",
+      price: "Rs.8,950",
+      tag: "New",
+      sizes: ["S","M","XL"]
+    },
+     {
+      imgMain: "./assets/images/67.png",
+      title: "Grey Sovereign Shalwar Kameez",
+      price: "Rs.8,950",
+      tag: "New",
+      sizes: ["S","M","XL"]
+    },
+    {
+      imgMain: "./assets/images/60.png",
+      // imgHover: "./assets/images/61.jpg",
+      title: "Sky Blue Heritage Shalwar Kameez",
+      price: "Rs.8,950",
+      tag: "",
+      sizes: ["S","M","XL"]
+    },
+    //  <img src="${prod.imgHover}" class="img-hover">
+  ];
+
+
+const Pcontainer = document.getElementById("productsContainer");
+const INITIAL_SHOW = 8;
+const LOAD_MORE    = 4;
+let shown = 0;
+
+function renderCards(from, count) {
+  const slice = products.slice(from, from + count);
+  slice.forEach(prod => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
+      <div class="card-outer">
+        <div class="card-inner">
+          <div class="img-box">
+            <img src="${prod.imgMain.trim()}" alt="${prod.title}" class="img-main">
+           
+            ${prod.tag ? `<span class="tag">${prod.tag}</span>` : ""}
+            ${prod.sizes.length ? `<div class="size-options">${prod.sizes.map(s => `<button class="size">${s}</button>`).join('')}</div>` : ""}
+          </div>
+          <p class="title">${prod.title}</p>
+          <h4 class="price">${prod.price}</h4>
+        </div>
+      </div>`;
+      
+    Pcontainer.appendChild(card);
+  });
+  shown += slice.length;
+}
+
+// pehle 8 render karo
+renderCards(0, INITIAL_SHOW);
+
+// ── Show More button ──
+const showMoreBtn = document.createElement("div");
+showMoreBtn.className = "product-btn-wrapper";
+showMoreBtn.innerHTML = `<button id="showMoreBtn" class="product-btn">Show More</button>`;
+document.querySelector(".section").appendChild(showMoreBtn);
+
+// ── Show Less button ── 
+const showLessBtn = document.createElement("div");
+showLessBtn.className = "product-btn-wrapper";
+showLessBtn.style.display = "none";  // ← wrapper par lagao, button par nahi
+showLessBtn.innerHTML = `<button id="showLessBtn-btn" class="product-btn">Show Less</button>`;
+document.querySelector(".section").appendChild(showLessBtn);
+
+// ── Show More click ──
+document.getElementById("showMoreBtn").addEventListener("click", () => {
+  renderCards(shown, LOAD_MORE);
+  if (shown >= products.length) {
+    showMoreBtn.style.display = "none";
+  }
+  showLessBtn.style.display = "block"; 
+});
+
+// ── Show Less click ──
+document.getElementById("showLessBtn-btn").addEventListener("click", () => {
+  Pcontainer.innerHTML = "";
+  shown = 0;
+  renderCards(0, INITIAL_SHOW);
+  showMoreBtn.style.display = "block";
+  showLessBtn.style.display = "none"; // ← wrapper chhupaao
+  document.querySelector(".section").scrollIntoView({ behavior: "smooth" });
+});
+</script>
+<!-- ---8--Cards---End--- -->
+<!-- /* CASUAL SHIRTS */ -->
+ <script>
+const shirts = [
+  { img: './assets/images/60.png', name: 'Navy Prestige Casual Shirt', price: 'Rs.4,250', sizes: ["S","M","XL"]},
+  { img: './assets/images/60.png', name: 'Grey Formal Shirt', price: 'Rs.3,800', sizes: ["S","M","XL"]},
+  { img: './assets/images/60.png', name: 'White Slim Fit Shirt', price: 'Rs.4,100',sizes: ["S","M","XL"]},
+  { img: './assets/images/60.png', name: 'Black Classic Shirt', price: 'Rs.3,900' ,sizes: ["S","M","XL"]},
+  { img: './assets/images/60.png', name: 'Blue Checked Shirt', price: 'Rs.4,200',sizes: ["S","M","XL"]},
+  { img: './assets/images/60.png', name: 'Olive Casual Shirt', price: 'Rs.4,000', sizes: ["S","M","XL"] },
+  { img: './assets/images/60.png', name: 'Maroon Party Shirt', price: 'Rs.4,500', sizes: ["S","M","XL"]},
+  { img: './assets/images/60.png', name: 'Beige Summer Shirt', price: 'Rs.3,950', sizes: ["S","M","XL"] },
+];
+
+const gridEl = document.getElementById('gridEl');
+
+// generate cards dynamically
+shirts.forEach(shirt => {
+  const card = document.createElement('div');
+  card.classList.add('shirt-card');
+
+  // create sizes HTML if exists
+  let sizesHTML = '';
+  if (shirt.sizes && shirt.sizes.length > 0) {
+    sizesHTML = `
+      <div class="size-options1">
+        ${shirt.sizes.map(size => `<span class="size1">${size}</span>`).join('')}
+      </div>
+    `;
+  }
+
+  card.innerHTML = `
+    <div class="shirt-image">
+      <img src="${shirt.img}" alt="${shirt.name}">
+      ${sizesHTML} <!-- sizes appear on hover -->
+    </div>
+    <div class="shirt-info">
+      <div class="shirt-name">${shirt.name}</div>
+      <div class="shirt-price">${shirt.price}</div>
+    </div>
+  `;
+
+  gridEl.appendChild(card);
+});
+</script>
+ <script>
+const carousel  = document.getElementById('carouselEl');
+const fill      = document.getElementById('progressFill');
+
+/* ── progress update ── */
+function updateProgress() {
+  const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+  if (maxScroll <= 0) {
+    fill.style.width = "35%"; 
+    return;
+  }
+  const pct = (carousel.scrollLeft / maxScroll) * 100;
+  fill.style.width = Math.max(pct, 35) + '%';
+}
+
+carousel.addEventListener('scroll', updateProgress, { passive: true });
+
+/* ── mouse drag ── */
+let isDown = false, startX = 0, startScroll = 0, hasDragged = false;
+
+carousel.addEventListener('mousedown', e => {
+  isDown = true;
+  hasDragged = false;
+  startX = e.pageX - carousel.offsetLeft;
+  startScroll = carousel.scrollLeft;
+  carousel.classList.add('is-dragging');
+});
+
+window.addEventListener('mouseup', () => {
+  isDown = false;
+  carousel.classList.remove('is-dragging');
+});
+
+carousel.addEventListener('mousemove', e => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - carousel.offsetLeft;
+  const walk = (x - startX) * 1.4;
+  if (Math.abs(walk) > 4) hasDragged = true;
+  carousel.scrollLeft = startScroll - walk;
+});
+
+/* prevent click when dragging */
+carousel.addEventListener('click', e => { if (hasDragged) e.stopPropagation(); }, true);
+
+/* ── touch support ── */
+let touchStartX = 0, touchStartScroll = 0;
+
+carousel.addEventListener('touchstart', e => {
+  touchStartX = e.touches[0].pageX;
+  touchStartScroll = carousel.scrollLeft;
+}, { passive: true });
+
+carousel.addEventListener('touchmove', e => {
+  const diff = touchStartX - e.touches[0].pageX;
+  carousel.scrollLeft = touchStartScroll + diff;
+}, { passive: true });
+
+/* ── init ── */
+setTimeout(updateProgress, 80);
+</script>
+
+ <!-- /* --Green---Slider---3 different---functionality---Start-- */ -->
+  <script>
+  const stylesData = [
+    {
+      title: 'Formals',
+      subtitle: 'Sophistication meets<br>confidence',
+      img: './assets/images/60-removebg-preview.png'
+    },
+    {
+      title: 'Casuals',
+      subtitle: 'Designed for everyday<br>comfort',
+      img: './assets/images/67.png'
+    },
+    {
+      title: 'Tehwar',
+      subtitle: 'Tradition meets modern<br>sophistication',
+      img: './assets/images/69.png'
+    },
+    {
+      title: 'Accessories',
+      subtitle: 'Finish every look the<br>right way',
+      img: './assets/images/61.png'
+    },
+  ];
+
+  // ── RENDER CARDS ──
+  const track  = document.getElementById('sliderTrack');
+  stylesData.forEach(item => {
+    track.innerHTML += `
+      <div class="card">
+        <img src="${item.img}" alt="${item.title}">
+        <div class="card-content">
+          <div class="card-title">${item.title}</div>
+          <div class="card-line"></div>
+          <div class="card-subtitle">${item.subtitle}</div>
+          <span class="card-cta">Shop Now</span>
+        </div>
+      </div>`;
+  });
+
+  // ── RENDER DESKTOP BAR ──
+  const desktopBar = document.getElementById('desktopBar');
+  stylesData.forEach(item => {
+    desktopBar.innerHTML += `
+      <div class="desktop-bar-item">
+      </div>`;
+  });
+
+  const cards  = Array.from(track.querySelectorAll('.card'));
+  const pagEl  = document.getElementById('pagination1');
+  const TOTAL  = cards.length;
+
+  let current  = 0;
+  let visible  = 4;
+  let startX1   = 0;
+
+  function getVisible() {
+    const w = window.innerWidth;
+    if (w <= 480) return 1;
+    if (w <= 768) return 2;
+    return 4;
+  }
+
+  function setCardSizes() {
+    // Each card width = 100/visible % of the VIEWPORT (track is 100vw wide)
+    const pct = 100 / visible;
+    cards.forEach(c => {
+      c.style.width = pct + 'vw';
+      if (visible === 1)      c.style.height = '110vw';
+      else if (visible === 2) c.style.height = '70vw';
+      else                    c.style.height = '360px';
+    });
+  }
+
+  function totalSlides() {
+    return Math.ceil(TOTAL / visible);
+  }
+
+  function buildDots() {
+    pagEl.innerHTML = '';
+    // both 768 and 320-480 use circle dots now
+    for (let i = 0; i < totalSlides(); i++) {
+      const btn = document.createElement('button');
+      btn.className = 'dot-circle' + (i === current ? ' active' : '');
+      btn.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      btn.addEventListener('click', () => goTo(i));
+      pagEl.appendChild(btn);
+    }
+  }
+
+  function updateDots() {
+    const dots = pagEl.querySelectorAll('button');
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function goTo(index) {
+    current = Math.max(0, Math.min(index, totalSlides() - 1));
+    track.style.transform = `translateX(-${current * 100}vw)`;
+    updateDots();
+  }
+
+  /* touch swipe */
+  track.addEventListener('touchstart', e => { startX1 = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend',   e => {
+    const diff = startX1 - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) diff > 0 ? goTo(current + 1) : goTo(current - 1);
+  });
+
+  function init() {
+    visible = getVisible();
+    current = 0;
+
+    // reset without animation
+    track.style.transition = 'none';
+    track.style.transform  = 'translateX(0)';
+
+    setCardSizes();
+
+    const showPag = visible < 4;
+    pagEl.style.display = showPag ? 'flex' : 'none';
+    if (showPag) buildDots();
+
+    // re-enable animation next frame
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      track.style.transition = 'transform 0.6s cubic-bezier(0.77,0,0.175,1)';
+    }));
+  }
+
+  window.addEventListener('resize', init);
+  init();
+</script>
+  <!-- /* --Green---Slider---3 different---functionality---End-- */ -->
+
+
+<!-- --WHITE--BUTTON--SLIDER--Start-->
+ <script>
+const grid = document.getElementById('reviewsGrid');
+const revcontainer = document.getElementById('reviewsContainer');
+const prevBtn1 = document.getElementById('prevBtn1');
+const nextBtn1 = document.getElementById('nextBtn1');
+
+/* DATA */
+const originalCards = `
+<div class="review-card">
+  <img src="./assets/images/client1.png" alt="Client Brand 1 logo" class="review-img">
+</div>
+<div class="review-card">
+  <img src="./assets/images/client2.png" alt="Client Brand 2 logo" class="review-img">
+</div>
+
+<div class="review-card">
+   <img src="./assets/images/client3.png" alt="Client Brand 3 logo" class="review-img">
+</div>
+
+<div class="review-card">
+   <img src="./assets/images/client4.png" alt="Client Brand 4 logo" class="review-img">
+</div>
+<div class="review-card">
+   <img src="./assets/images/client5.png" alt="Client Brand 5 logo" class="review-img">
+</div>
+<div class="review-card">
+   <img src="./assets/images/client6.png" alt="Client Brand 6 logo" class="review-img">
+</div>
+<div class="review-card">
+   <img src="./assets/images/client7.png" alt="Client Brand 7 logo" class="review-img">
+</div>
+<div class="review-card">
+   <img src="./assets/images/client8.png" alt="Client Brand 8 logo" class="review-img">
+</div>
+<div class="review-card">
+   <img src="./assets/images/clinet9.png" alt="Client Brand 9 logo" class="review-img">
+</div>
+<div class="review-card">
+   <img src="./assets/images/clinet10.png" alt="Client Brand 10 logo" class="review-img">
+</div>
+<div class="review-card">
+   <img src="./assets/images/client11.png" alt="Client Brand 11 logo" class="review-img">
+</div>
+<div class="review-card">
+   <img src="./assets/images/client12.png" alt="Client Brand 12 logo" class="review-img">
+</div>
+<div class="review-card">
+   <img src="./assets/images/cleint13.png" alt="Client Brand 13 logo" class="review-img">
+</div>
+<div class="review-card">
+   <img src="./assets/images/client14.png" alt="Client Brand 14 logo" class="review-img">
+</div>
+`;
+
+grid.innerHTML = originalCards + originalCards;
+
+/* 🔥 DYNAMIC WIDTH */
+function getCardWidth() {
+  const card = document.querySelector('.review-card');
+  const gap = 40;
+  return card.offsetWidth + gap;
+}
+
+let scrollPosition = 0;
+let isTransitioning = false;
+let autoSlideInterval;
+
+/* AUTO SLIDE */
+function startAutoSlide() {
+  autoSlideInterval = setInterval(() => {
+    if (!isTransitioning) moveNext();
+  }, 3000);
+}
+
+/* NEXT */
+function moveNext() {
+  const cardWidth = getCardWidth();
+  isTransitioning = true;
+  scrollPosition += cardWidth;
+
+  grid.style.transform = `translateX(-${scrollPosition}px)`;
+
+  setTimeout(() => {
+    if (scrollPosition >= (grid.scrollWidth / 2)) {
+      grid.style.transition = 'none';
+      scrollPosition = 0;
+      grid.style.transform = `translateX(0)`;
+    }
+    grid.style.transition = 'transform 0.8s ease';
+    isTransitioning = false;
+  }, 800);
+}
+
+/* PREV */
+function movePrev() {
+  const cardWidth = getCardWidth();
+  isTransitioning = true;
+  scrollPosition -= cardWidth;
+
+  grid.style.transform = `translateX(-${scrollPosition}px)`;
+
+  setTimeout(() => {
+    if (scrollPosition < 0) {
+      scrollPosition = (grid.scrollWidth / 2) - cardWidth;
+      grid.style.transform = `translateX(-${scrollPosition}px)`;
+    }
+    isTransitioning = false;
+  }, 800);
+}
+
+/* BUTTONS */
+nextBtn1.onclick = () => {
+  clearInterval(autoSlideInterval);
+  moveNext();
+  startAutoSlide();
+};
+
+prevBtn1.onclick = () => {
+  clearInterval(autoSlideInterval);
+  movePrev();
+  startAutoSlide();
+};
+
+/* HOVER PAUSE */
+revcontainer.onmouseenter = () => clearInterval(autoSlideInterval);
+revcontainer.onmouseleave = startAutoSlide;
+
+/* RESIZE FIX */
+window.addEventListener('resize', () => {
+  scrollPosition = 0;
+  grid.style.transform = `translateX(0)`;
+});
+
+/* START */
+startAutoSlide();
+</script>
+
+<!-- --WHITE--BUTTON--SLIDER--End-->
+
+<script>
+  document.querySelectorAll('.footer-col ul li a').forEach(link => {
+  if (link.href === window.location.href) {
+    link.classList.add('active');
+  }
+});
+</script>
+</html>
