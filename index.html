@@ -35,11 +35,11 @@
 
         <a href="./index.html" class="nav-link">Home<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
        
-        <a href="./Products.html" class="nav-link">Products<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
-        <a href="./Services.html" class="nav-link">Our Services<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
-        <a href="./About.html" class="nav-link">About Us<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
-        <a href="./Contact.html" class="nav-link">Contact<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
-        <a href="./Documentation.html" class="nav-link">Documentation<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
+        <a href="" class="nav-link">Products<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
+        <a href="" class="nav-link">Our Services<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
+        <a href="" class="nav-link">About Us<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
+        <a href="" class="nav-link">Contact<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
+        <a href="" class="nav-link">Documentation<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
       </nav>
 
     </div>
@@ -50,13 +50,13 @@
  <div class="simple-carousel">
     <div class="carousel-slide active">
       <div class="banner" style="background-image: url(./assets/images/mainbanner.jpg);">
-        <div class="text-wrapper">
+        <!-- <div class="text-wrapper">
           <div class="overlay-text">
          <h3 class="first-text"><b>Casual Shirts</b></h3>
           </div>
          <button class="second-text">View Collection</button>
 
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -93,7 +93,7 @@
 <!-- Products--Cards   -->
 <div class="section">
   <h2 class="section-title1">SHALWAR KAMEEZ & WAISTCOATS</h2>
-  <hr style="border:1px solid black; width:23%;margin-left: 0px;">
+  <hr class="line1">
   <hr style="border:1px solid black; margin-top: -8px;">
   
   <div class="products" id="productsContainer">
@@ -131,7 +131,7 @@
 
   <!-- /* --Green---Slider---3 different---functionality---Start-- */ -->
    <div class="section-header1">
-  <h2>Shop by Style</h2>
+  <h3>Shop by Style</h3>
   <p>From crisp formals to casuals find the look that fits every occasion</p>
 </div>
 
@@ -151,7 +151,7 @@
  <div class="testimonial-section">
 
   <div class="header1">
-    <h2>Our Clients</h2>
+    <h2>Our truested clients</h2>
     <p>Trusted by clients, proven by experience.</p>
   </div>
 
@@ -184,7 +184,7 @@
     <!-- LOGO + ABOUT -->
     <div class="footer-col">
       <img src="./assets/images/mainlogo-removebg-preview (2).png" class="footer-logo">
-      <p>
+      <p class="logotext">
         Premium quality knitwear & apparel. Delivering elegance, comfort, and
         modern style for every occasion.
       </p>
@@ -196,10 +196,10 @@
       <ul>
         <!-- <li><a href="./index.html">Home</a></li> -->
          <li><a href="./index.html" class="active">Home</a></li>
-        <li><a href="./Products.html" >Products</a></li>
-        <li><a href="./Services.html">Services</a></li>
-        <li><a href="./About.html">About Us</a></li>
-        <li><a href="./Contact.html">Contact</a></li>
+        <li><a href="" >Products</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Contact</a></li>
       </ul>
     </div>
 
@@ -217,26 +217,24 @@
     <!-- CONTACT -->
     <div class="footer-col">
       <h3>Contact Us</h3>
-      <p>📍 2 km Defence Road, Lahore</p>
+      <!-- <p>📍 2 km Defence Road, Lahore</p>
       <p>📞 +92 300 8437436</p>
-      <p>✉️ info@alriaz.com</p>
-
-      <!-- SOCIAL -->
-      <div class="social-icons">
-        <a href="#">A</a>
-        <a href="#">R</a>
-        <a href="#">K</a>
-      </div>
+      <p>✉️ info@alriaz.com</p> -->
+      <p><span>📍</span> 2 km Defence Road, Lahore</p>
+      <p><span>📞</span> <a href="tel:+923008437436">+92 300 8437436</a></p>
+      <p><span>✉️</span> <a href="mailto:info@alriaz.com">info@alriaz.com</a></p>
+      
     </div>
 
   </div>
 
   <!-- BOTTOM -->
-  <div class="footer-bottom">
-    <p>© 2026 Al-Riaz Knitwear. All Rights Reserved.</p>
-  </div>
-</footer>
 
+<div class="footer-bottom">
+    <p >© 2026 Al-Riaz Knitwear. All Rights Reserved.</p>
+  </div>
+
+  </footer>
 </body>
 <!-- Header-heading-script --Start-->
  
@@ -421,69 +419,60 @@ showSlide(currentIndex);
 <!-- ---8--Cards---Start--- -->
 
 <script>
-  // ✅ Array of product objects
-  const products = [
+
+ const products = [
     {
       imgMain: "./assets/images/67.png",
       title: "Grey Sovereign Shalwar Kameez",
       price: "Rs.8,950",
-      tag: "New",
       sizes: ["S","M","XL"]
     },
     {
       imgMain: "./assets/images/60.png",
       title: "Sky Blue Heritage Shalwar Kameez",
       price: "Rs.8,950",
-      tag: "",
       sizes: ["S","M","XL"]
     },
     {
       imgMain: "./assets/images/67.png",
       title: "Grey Sovereign Shalwar Kameez",
       price: "Rs.8,950",
-      tag: "New",
       sizes: ["S","M","XL"]
     },
     {
       imgMain: "./assets/images/60.png",
       title: "Sky Blue Heritage Shalwar Kameez",
       price: "Rs.8,950",
-      tag: "",
       sizes: ["S","M","XL"]
     },
     {
       imgMain: "./assets/images/60.png",
       title: "Sky Blue Heritage Shalwar Kameez",
       price: "Rs.8,950",
-      tag: "",
       sizes: ["S","M","XL"]
     },
      {
       imgMain: "./assets/images/67.png",
       title: "Grey Sovereign Shalwar Kameez",
       price: "Rs.8,950",
-      tag: "New",
       sizes: ["S","M","XL"]
     },
     {
       imgMain: "./assets/images/60.png",
       title: "Sky Blue Heritage Shalwar Kameez",
       price: "Rs.8,950",
-      tag: "",
       sizes: ["S","M","XL"]
     },
      {
       imgMain: "./assets/images/67.png",
       title: "Grey Sovereign Shalwar Kameez",
       price: "Rs.8,950",
-      tag: "New",
       sizes: ["S","M","XL"]
     },
      {
       imgMain: "./assets/images/67.png",
       title: "Grey Sovereign Shalwar Kameez",
       price: "Rs.8,950",
-      tag: "New",
       sizes: ["S","M","XL"]
     },
     {
@@ -491,16 +480,15 @@ showSlide(currentIndex);
       // imgHover: "./assets/images/61.jpg",
       title: "Sky Blue Heritage Shalwar Kameez",
       price: "Rs.8,950",
-      tag: "",
+      // tag: "",
       sizes: ["S","M","XL"]
     },
     //  <img src="${prod.imgHover}" class="img-hover">
-  ];
-
+];
 
 const Pcontainer = document.getElementById("productsContainer");
 const INITIAL_SHOW = 8;
-const LOAD_MORE    = 4;
+const LOAD_MORE = 4;
 let shown = 0;
 
 function renderCards(from, count) {
@@ -514,53 +502,40 @@ function renderCards(from, count) {
         <div class="card-inner">
           <div class="img-box">
             <img src="${prod.imgMain.trim()}" alt="${prod.title}" class="img-main">
-           
-            ${prod.tag ? `<span class="tag">${prod.tag}</span>` : ""}
             ${prod.sizes.length ? `<div class="size-options">${prod.sizes.map(s => `<button class="size">${s}</button>`).join('')}</div>` : ""}
           </div>
           <p class="title">${prod.title}</p>
           <h4 class="price">${prod.price}</h4>
         </div>
       </div>`;
-      
+
     Pcontainer.appendChild(card);
   });
   shown += slice.length;
 }
 
-// pehle 8 render karo
+// Pehle 8 render karo
 renderCards(0, INITIAL_SHOW);
 
-// ── Show More button ──
+// Show More button banana
 const showMoreBtn = document.createElement("div");
 showMoreBtn.className = "product-btn-wrapper";
 showMoreBtn.innerHTML = `<button id="showMoreBtn" class="product-btn">Show More</button>`;
 document.querySelector(".section").appendChild(showMoreBtn);
 
-// ── Show Less button ── 
-const showLessBtn = document.createElement("div");
-showLessBtn.className = "product-btn-wrapper";
-showLessBtn.style.display = "none";  // ← wrapper par lagao, button par nahi
-showLessBtn.innerHTML = `<button id="showLessBtn-btn" class="product-btn">Show Less</button>`;
-document.querySelector(".section").appendChild(showLessBtn);
+// Agar pehle se hi sare cards show ho gaye toh button hide karo
+if (shown >= products.length) {
+  showMoreBtn.style.display = "none";
+}
 
-// ── Show More click ──
+// Show More click
 document.getElementById("showMoreBtn").addEventListener("click", () => {
   renderCards(shown, LOAD_MORE);
+
+  // Jab sare cards show ho jayein, button hatao
   if (shown >= products.length) {
     showMoreBtn.style.display = "none";
   }
-  showLessBtn.style.display = "block"; 
-});
-
-// ── Show Less click ──
-document.getElementById("showLessBtn-btn").addEventListener("click", () => {
-  Pcontainer.innerHTML = "";
-  shown = 0;
-  renderCards(0, INITIAL_SHOW);
-  showMoreBtn.style.display = "block";
-  showLessBtn.style.display = "none"; // ← wrapper chhupaao
-  document.querySelector(".section").scrollIntoView({ behavior: "smooth" });
 });
 </script>
 <!-- ---8--Cards---End--- -->
@@ -674,24 +649,21 @@ setTimeout(updateProgress, 80);
   <script>
   const stylesData = [
     {
-      title: 'Formals',
-      subtitle: 'Sophistication meets<br>confidence',
-      img: './assets/images/60-removebg-preview.png'
+      title: 'Mens wears',
+      img: './assets/images/means wear2.png'
     },
     {
-      title: 'Casuals',
-      subtitle: 'Designed for everyday<br>comfort',
-      img: './assets/images/67.png'
+      title: 'Ladies wears',
+      img: './assets/images/ladies wear.png'
     },
     {
-      title: 'Tehwar',
-      subtitle: 'Tradition meets modern<br>sophistication',
-      img: './assets/images/69.png'
+      title: 'Boys wears',
+      img: './assets/images/Boys wears.png'
     },
     {
-      title: 'Accessories',
-      subtitle: 'Finish every look the<br>right way',
-      img: './assets/images/61.png'
+      title: 'Girls wears',
+      // subtitle: 'Finish every look the<br>right way',
+      img: './assets/images/Girls wears.png'
     },
   ];
 
@@ -703,9 +675,6 @@ setTimeout(updateProgress, 80);
         <img src="${item.img}" alt="${item.title}">
         <div class="card-content">
           <div class="card-title">${item.title}</div>
-          <div class="card-line"></div>
-          <div class="card-subtitle">${item.subtitle}</div>
-          <span class="card-cta">Shop Now</span>
         </div>
       </div>`;
   });
@@ -729,7 +698,7 @@ setTimeout(updateProgress, 80);
   function getVisible() {
     const w = window.innerWidth;
     if (w <= 480) return 1;
-    if (w <= 768) return 2;
+    if (w <= 1024) return 2;
     return 4;
   }
 
@@ -804,7 +773,7 @@ setTimeout(updateProgress, 80);
   <!-- /* --Green---Slider---3 different---functionality---End-- */ -->
 
 
-<!-- --WHITE--BUTTON--SLIDER--Start-->
+<!-- --WHITE--BUTTON--client--SLIDER--Start-->
  <script>
 const grid = document.getElementById('reviewsGrid');
 const revcontainer = document.getElementById('reviewsContainer');
@@ -944,11 +913,11 @@ startAutoSlide();
 
 <!-- --WHITE--BUTTON--SLIDER--End-->
 
-<script>
+<!-- <script>
   document.querySelectorAll('.footer-col ul li a').forEach(link => {
   if (link.href === window.location.href) {
     link.classList.add('active');
   }
 });
-</script>
+</script> -->
 </html>
