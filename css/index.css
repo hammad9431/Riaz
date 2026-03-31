@@ -559,7 +559,7 @@ display: none;
   color: rgb(35, 35, 35);
   font-size: 16px;
   font-weight: 800;
-  letter-spacing: 0.8px;
+  letter-spacing: 1px;
   line-height: 24px;
   text-transform: uppercase;
 }
@@ -583,7 +583,25 @@ border-top-right-radius: 6px;border-bottom-right-radius: 6px;}
   gap: 30px;
   margin-top: -7.5px;
 }
+.card {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+}
 
+.card.show {
+  animation: smoothFadeUp 0.6s ease forwards;
+}
+
+@keyframes smoothFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
 @media (max-width: 1024px) {
   .products {
     grid-template-columns: repeat(3, 1fr);
@@ -672,6 +690,7 @@ border-top-right-radius: 6px;border-bottom-right-radius: 6px;}
 /* show on hover */
 .img-box:hover .size-options {
   opacity: 1;
+  cursor: pointer;
  
 }
 
@@ -709,6 +728,7 @@ border-top-right-radius: 6px;border-bottom-right-radius: 6px;}
   font-weight: 400;
   letter-spacing: 0.24px;
   line-height: 22px;
+  cursor: pointer;
 }
 .title:hover{
   text-decoration: underline;
@@ -804,6 +824,10 @@ margin-top: 40px;
       scrollbar-width: none;
       cursor: grab;
       -webkit-overflow-scrolling: touch;
+      display: flex;
+  
+  
+  scroll-snap-type: x mandatory; /* 👈 magic */
     }
 
     .carousel-container::-webkit-scrollbar {
@@ -826,12 +850,26 @@ margin-top: 40px;
     .shirt-card {
       width: 268px;
       flex-shrink: 0;
-      background: var(--white);
+      background: white;
       border-radius: var(--card-radius);
       overflow: hidden;
       cursor: pointer;
       position: relative;
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+  
+  opacity: 0;
+  transform: translateX(60px) scale(0.95);
+  transition: all 0.6s ease;
     }
+    .shirt-card.show {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+.shirt-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.12);
+}
 
     .shirt-card:hover .card-overlay {
       opacity: 1;
@@ -1081,7 +1119,7 @@ margin-top: 40px;
   }
 
   /* ── CARD ── */
-  .card {
+  .card1 {
     flex-shrink: 0;
     position: relative;
     overflow: hidden;
@@ -1090,19 +1128,19 @@ margin-top: 40px;
   
   }
 
-  .card img {
+  .card1 img {
     width: 100%; height: 100%;
     /* object-fit: fill;  */
     display: block;
     transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     filter: brightness(0.82);
   }
-  .card:hover img { 
+  .card1:hover img { 
   transform: scale(1.06); 
   filter: brightness(0.9);
  }
 
-  .card::before {
+  .card1::before {
     content: '';
     position: absolute; inset: 0;
     /* background: linear-gradient(to top,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.1) 50%,transparent 100%); */
@@ -1110,7 +1148,7 @@ margin-top: 40px;
     pointer-events: none;
   }
 
-  .card-content {
+  .card1-content {
     position: absolute; 
     top: 60%; left: 0; right: 0;
     z-index: 2; 
@@ -1121,7 +1159,7 @@ margin-top: 40px;
     text-align: center;  
   }
 
-  .card-title {
+  .card1-title {
     font-weight: 700;
     font-size: clamp(18px, 2vw, 26px);
     letter-spacing: 4px; 
