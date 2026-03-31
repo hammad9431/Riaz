@@ -122,7 +122,7 @@
 
   <!-- PROGRESS -->
   <div class="progress-section">
-    <div class="progress-track">
+    <div class="progress-track" id="progressBar">
       <div class="progress-fill" id="progressFill"></div>
     </div>
   </div>
@@ -619,26 +619,29 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 <!-- ---8--Cards---End--- -->
 <!-- /* CASUAL SHIRTS */ -->
- <script>
+
+<script>
 const shirts = [
   { img: './assets/images/60.png', name: 'Navy Prestige Casual Shirt', price: 'Rs.4,250', sizes: ["S","M","XL"]},
   { img: './assets/images/60.png', name: 'Grey Formal Shirt', price: 'Rs.3,800', sizes: ["S","M","XL"]},
-  { img: './assets/images/60.png', name: 'White Slim Fit Shirt', price: 'Rs.4,100',sizes: ["S","M","XL"]},
-  { img: './assets/images/60.png', name: 'Black Classic Shirt', price: 'Rs.3,900' ,sizes: ["S","M","XL"]},
-  { img: './assets/images/60.png', name: 'Blue Checked Shirt', price: 'Rs.4,200',sizes: ["S","M","XL"]},
-  { img: './assets/images/60.png', name: 'Olive Casual Shirt', price: 'Rs.4,000', sizes: ["S","M","XL"] },
+  { img: './assets/images/60.png', name: 'White Slim Fit Shirt', price: 'Rs.4,100', sizes: ["S","M","XL"]},
+  { img: './assets/images/60.png', name: 'Black Classic Shirt', price: 'Rs.3,900', sizes: ["S","M","XL"]},
+  { img: './assets/images/60.png', name: 'Blue Checked Shirt', price: 'Rs.4,200', sizes: ["S","M","XL"]},
+  { img: './assets/images/60.png', name: 'Olive Casual Shirt', price: 'Rs.4,000', sizes: ["S","M","XL"]},
   { img: './assets/images/60.png', name: 'Maroon Party Shirt', price: 'Rs.4,500', sizes: ["S","M","XL"]},
-  { img: './assets/images/60.png', name: 'Beige Summer Shirt', price: 'Rs.3,950', sizes: ["S","M","XL"] },
+  { img: './assets/images/60.png', name: 'Beige Summer Shirt', price: 'Rs.3,950', sizes: ["S","M","XL"]},
 ];
 
-const gridEl = document.getElementById('gridEl');
+const gridEl    = document.getElementById('gridEl');
+const carousel  = document.getElementById('carouselEl');
+const fill      = document.getElementById('progressFill');
+const bar       = document.getElementById('progressBar');
 
-// generate cards dynamically
+// ── Cards generate ──
 shirts.forEach(shirt => {
   const card = document.createElement('div');
   card.classList.add('shirt-card');
 
-  // create sizes HTML if exists
   let sizesHTML = '';
   if (shirt.sizes && shirt.sizes.length > 0) {
     sizesHTML = `
@@ -651,7 +654,7 @@ shirts.forEach(shirt => {
   card.innerHTML = `
     <div class="shirt-image">
       <img src="${shirt.img}" alt="${shirt.name}">
-      ${sizesHTML} <!-- sizes appear on hover -->
+      ${sizesHTML}
     </div>
     <div class="shirt-info">
       <div class="shirt-name">${shirt.name}</div>
@@ -661,43 +664,18 @@ shirts.forEach(shirt => {
 
   gridEl.appendChild(card);
 });
-</script>
- <script>
-const carousel  = document.getElementById('carouselEl');
-const fill      = document.getElementById('progressFill');
 
-const cardsw = document.querySelectorAll('.shirt-card');
-
-const observer1 = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    } else {
-      entry.target.classList.remove("show"); // loop animation
-    }
-
-  });
-}, {
-  root: carousel,     // 👈 IMPORTANT (carousel ke andar detect karega)
-  threshold: 0.3
-});
-
-cardsw.forEach(card => observer1.observe(card));
-/* ── progress update ── */
+// ── Progress update ──
 function updateProgress() {
   const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-  if (maxScroll <= 0) {
-    fill.style.width = "35%"; 
-    return;
-  }
+  if (maxScroll <= 0) { fill.style.width = "35%"; return; }
   const pct = (carousel.scrollLeft / maxScroll) * 100;
   fill.style.width = Math.max(pct, 35) + '%';
 }
 
 carousel.addEventListener('scroll', updateProgress, { passive: true });
 
-/* ── mouse drag ── */
+// ── Mouse drag on carousel ──
 let isDown = false, startX = 0, startScroll = 0, hasDragged = false;
 
 carousel.addEventListener('mousedown', e => {
@@ -722,10 +700,11 @@ carousel.addEventListener('mousemove', e => {
   carousel.scrollLeft = startScroll - walk;
 });
 
-/* prevent click when dragging */
-carousel.addEventListener('click', e => { if (hasDragged) e.stopPropagation(); }, true);
+carousel.addEventListener('click', e => {
+  if (hasDragged) e.stopPropagation();
+}, true);
 
-/* ── touch support ── */
+// ── Touch support on carousel ──
 let touchStartX = 0, touchStartScroll = 0;
 
 carousel.addEventListener('touchstart', e => {
@@ -734,11 +713,39 @@ carousel.addEventListener('touchstart', e => {
 }, { passive: true });
 
 carousel.addEventListener('touchmove', e => {
-  const diff = touchStartX - e.touches[0].pageX;
-  carousel.scrollLeft = touchStartScroll + diff;
+  carousel.scrollLeft = touchStartScroll + (touchStartX - e.touches[0].pageX);
 }, { passive: true });
 
-/* ── init ── */
+// ── Progress bar CLICK ──
+bar.addEventListener('click', e => {
+  const rect = bar.getBoundingClientRect();
+  const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+  const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+  carousel.scrollTo({ left: ratio * maxScroll, behavior: 'smooth' });
+});
+
+// ── Progress bar MOUSE DRAG ──
+bar.addEventListener('mousemove', e => {
+  if (e.buttons !== 1) return;
+  const rect = bar.getBoundingClientRect();
+  const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+  const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+  carousel.scrollLeft = ratio * maxScroll;
+});
+
+// ── Progress bar TOUCH ──
+bar.addEventListener('touchstart', e => {
+  touchStartX = e.touches[0].pageX;
+}, { passive: true });
+
+bar.addEventListener('touchmove', e => {
+  const rect = bar.getBoundingClientRect();
+  const ratio = Math.max(0, Math.min(1, (e.touches[0].clientX - rect.left) / rect.width));
+  const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+  carousel.scrollLeft = ratio * maxScroll;
+}, { passive: true });
+
+// ── Init ──
 setTimeout(updateProgress, 80);
 </script>
 
