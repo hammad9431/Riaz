@@ -544,14 +544,29 @@ display: none;
   border-radius: 50%;
   width: 35px;
   height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  display: inline-block;              
+  justify-content: center;   
+  align-items: center;      
+
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
 }
-
+.prev img{
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  margin-top: 3px;
+  margin-left: -2px;
+}
+.next img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  margin-top: 3px;
+  margin-left: 2px;
+}
 .prev:hover,
 .next:hover {
   background: #f0f0f0;
@@ -668,12 +683,14 @@ display: none;
     height: 570px;
   }
   .prev {
-    left: 0px;
-     top: 50%;
+    /* left: 0px;
+    top: 50%; */
+    display: none;
   }
   .next {
-    right: 0px;
-     top: 50%;
+    /* right: 0px;
+     top: 50%; */
+     display: none;
   }
 }
 /* Background---Image ---End */
