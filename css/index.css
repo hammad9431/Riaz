@@ -302,6 +302,11 @@ display: none;
   transform: translateY(-50%);
   width: 16px;
 }
+@media (min-width: 1440px) {
+.nav-link{
+  font-size: 16px;
+}
+}
 @media (min-width: 768px) and (max-width: 1024px) {
   .nav {
   gap: 20px;
@@ -638,7 +643,7 @@ display: none;
   /* .first-text { font-size: 20px; }
   .second-text { font-size: 20px; } */
 }
-@media (max-width: 320px) {
+@media (max-width: 430px) {
   .banner {
   display: none;
 }
@@ -724,6 +729,11 @@ border-top-right-radius: 6px;border-bottom-right-radius: 6px;}
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+@media (min-width: 1440px) {
+  .section-title1{
+    font-size: 20px;
   }
 }
 @media (max-width: 1024px) {
@@ -888,6 +898,19 @@ border-top-right-radius: 6px;border-bottom-right-radius: 6px;}
   cursor: pointer;
   font-family: poppins;
   transition: background 0.3s ease;
+}
+@media (min-width: 1440px) {
+  .size{
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .title{
+    font-size: 16px;
+  }
+  .price{
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1143,6 +1166,19 @@ border-top-right-radius: 6px;border-bottom-right-radius: 6px;}
     }
 
     /* ── RESPONSIVE ── */
+    @media (min-width: 1440px) {
+      .size1{
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+      }
+      .shirt-name{
+        font-size: 16px;
+      }
+      .shirt-price{
+        font-size: 18px;
+      }
+    }
     @media (max-width: 768px) {
       /* body { padding: 32px 0 40px; } */
 
@@ -1155,7 +1191,7 @@ border-top-right-radius: 6px;border-bottom-right-radius: 6px;}
         
       }
 .view-all{
-  padding-bottom: 18px;
+  padding-bottom: 20px;
 }
 
       .header-right { align-self: flex-end; }
@@ -1179,6 +1215,7 @@ border-top-right-radius: 6px;border-bottom-right-radius: 6px;}
  @media (max-width: 320px) {
   .view-all{
   padding-bottom: 18px;
+  font-size: 12px;
 }
  }
     /* --Green---Slider---3 different---functionality---Start-- */
@@ -1342,35 +1379,6 @@ border-top-right-radius: 6px;border-bottom-right-radius: 6px;}
 
 
     /* <!-- --WHITE--BUTTON--SLIDER--Start--> */
-  .testimonial-section {
-  max-width: 1200px;
- margin: auto;
-  padding: 40px 150px;
- 
-}
-
-/* HEADER */
-
-.header1 h2 {
-  color: rgb(35, 35, 35);
-  font-family: poppins;
-  font-size: 24px;
-  font-weight: 700;
-   margin-bottom: -15px;
-   letter-spacing: 1.2px;
-   line-height: 28px;
-   text-transform: capitalize;
-}
-
-.header1 p {
-  color: rgb(35, 35, 35);
-  font-family: poppins;
-  font-size: 14px;
-  font-weight: 400;
-   margin-bottom: 15px;
-   letter-spacing: 0.28px;
-   line-height: 22px;
-}
 
 /* SLIDER */
 .reviews-container {
@@ -1386,8 +1394,8 @@ border-top-right-radius: 6px;border-bottom-right-radius: 6px;}
 
 /* CARD */
 .review-card {
-  width: 160px;
-  height: 120px;          
+ width: 160px;
+  height: 120px;           
   overflow: hidden;
   border: 0.5px solid #eee;
   border-radius: 5px;
@@ -1440,7 +1448,38 @@ border-top-right-radius: 6px;border-bottom-right-radius: 6px;}
 /* ========================= */
 /* 📱 RESPONSIVE */
 /* ========================= */
+/* @media (max-width: 2560px) {
+  .testimonial-section {    
+    padding: 80px 280px;
+    border: 1px solid red;
+  }
+  
+} */
 
+
+  .testimonial-section {     
+    padding: 60px 160px; 
+  }
+  .header1 h2 {
+  color: rgb(35, 35, 35);
+  font-family: poppins;
+  font-size: 24px;
+  font-weight: 700;
+   margin-bottom: -15px;
+   letter-spacing: 1.2px;
+   line-height: 28px;
+   text-transform: capitalize;
+}
+
+.header1 p {
+  color: rgb(35, 35, 35);
+  font-family: poppins;
+  font-size: 14px;
+  font-weight: 400;
+   margin-bottom: 15px;
+   letter-spacing: 0.28px;
+   line-height: 22px;
+}
 @media (max-width: 1024px) {
   .testimonial-section {
   max-width: 1200px;
@@ -1493,17 +1532,7 @@ border-top-right-radius: 6px;border-bottom-right-radius: 6px;}
     
   }
 }
-@media (min-width: 1440px) {
-  .testimonial-section {     
-    padding: 60px 160px;    
-  }
-}
 
-@media (min-width: 2560px) {
-  .testimonial-section {    
-    padding: 80px 250px;
-  }
-}
   /* <!-- --WHITE--BUTTON--SLIDER--End--> */
 
 /* FOOTER */
@@ -1598,7 +1627,16 @@ border-top-right-radius: 6px;border-bottom-right-radius: 6px;}
 /* ========================= */
 /* 📱 RESPONSIVE */
 /* ========================= */
+@media (min-width: 1440px) {
+  .footer-col h3 {
+    font-size: 18px;
+  }
 
+  .footer-col p,
+  .footer-col ul li a {
+    font-size: 15px;
+  }
+}
 @media (max-width: 1024px) {
   .footer-container {
     grid-template-columns: repeat(4, 1fr);
