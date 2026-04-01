@@ -545,7 +545,7 @@ display: none;
   width: 35px;
   height: 35px;
 
-  display: inline-block;              
+  display: flex;              
   justify-content: center;   
   align-items: center;      
 
@@ -557,14 +557,14 @@ display: none;
   width: 25px;
   height: 25px;
   object-fit: contain;
-  margin-top: 3px;
-  margin-left: -2px;
+  /* margin-top: 3px;
+  margin-left: -2px; */
 }
 .next img {
   width: 25px;
   height: 25px;
   object-fit: contain;
-  margin-top: 3px;
+  /* margin-top: 3px; */
   margin-left: 2px;
 }
 .prev:hover,
@@ -683,14 +683,14 @@ display: none;
     height: 570px;
   }
   .prev {
-    /* left: 0px;
-    top: 50%; */
-    display: none;
+    left: 0px;
+    top: 50%;
+    
   }
   .next {
-    /* right: 0px;
-     top: 50%; */
-     display: none;
+    right: 0px;
+     top: 50%;
+     /* display: none; */
   }
 }
 /* Background---Image ---End */
