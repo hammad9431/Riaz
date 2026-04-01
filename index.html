@@ -17,39 +17,43 @@
     <!-- <p class="slide-item item3">-42-35966647</p> -->
 </div>
 <header class="header">
-    <div class="header-main">
-
-      
-      <div class="logo">
-        <a href="./index.html" >
-        <img src="./assets/images/mainlogo-removebg-preview (2).png" alt="Al-Riaz Knitwear">
+  <div class="header-main">
+    <div class="logo">
+      <a href="./index.html">
+        <img src="./assets/images/mainlogo-removebg-preview (2).png" alt="Logo">
       </a>
-      </div>
-
-     
-      <button class="menu-toggle" id="menuToggle">☰</button>
-
-      <nav class="nav" id="mainNav">
-       
-        <button class="close-btn" id="closeMenu">✖</button>
-
-        <a href="./index.html" class="nav-link">Home<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
-       
-        <a href="" class="nav-link">Products<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
-        <a href="" class="nav-link">Our Services<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
-        <a href="" class="nav-link">About Us<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
-        <a href="" class="nav-link">Contact<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
-        <a href="" class="nav-link">Documentation<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
-      </nav>
-
     </div>
-  </header>
+     <button class="menu-toggle" id="menuToggle">☰</button>
+    <nav class="nav" id="mainNav">
+       <a href="./index.html" class="nav-link">Home<img class="arrow" src="./assets/images/right-arrow-angle.png" alt="right-arrow"></a>
+      <a href="#" class="nav-link">Products</a>
+      <a href="#" class="nav-link">Services</a>
+      <a href="#" class="nav-link">About Us</a>
+      <a href="#" class="nav-link">Contact</a>
+    </nav>
+
+    <button class="search-btn" id="searchToggle">
+      <img src="./assets/svg/search.svg" alt="Search">
+    </button>
+  </div>
+</header>
+
+<!-- ✅ Search Overlay -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-container">
+    <button class="search-close" id="searchClose">✖</button>
+    <input type="text" placeholder="Search" class="search-input" id="searchInput">
+    <img src="./assets/svg/search.svg" alt="Search">
+  </div>
+</div>
 
 <body>
-  <div class="carousel-main">
+  <!-- <div class="carousel-main"> -->
  <div class="simple-carousel">
-    <div class="carousel-slide active">
-      <div class="banner" style="background-image: url(./assets/images/mainbanner.jpg);">
+    <div class="carousel-slide">
+      <div class="banner" style="background-image: url(./assets/images/Polo_Shirts_6896917d-2ab8-47ae-9e30-f0721744f37e.webp);"></div>
+      <div class="banner1" style="background-image: url(./assets/images/Polo_Shirts_ff68ad2d-841a-4ee7-8af5-16b3e84d0aa7.webp);">
+        
         <!-- <div class="text-wrapper">
           <div class="overlay-text">
          <h3 class="first-text"><b>Casual Shirts</b></h3>
@@ -59,28 +63,23 @@
         </div> -->
       </div>
     </div>
-
     <div class="carousel-slide">
-      <div class="banner" style="background-image: url(./assets/images/productsbanner.jpg);">
-        <!-- <div class="text-wrapper">
-          <div class="overlay-text">
-            <h3 class="first-text">CREATIVE SOLUTIONS</h3>
-          </div>
-
-          <button class="second-text">View Collection</button>
-        </div> -->
+      <div class="banner" style="background-image: url(./assets/images/Casual_Shirts_ba8cbe6e-721b-41f5-8b0a-3e4d846f6417.webp);"></div>
+      <div class="banner1" style="background-image: url(./assets/images/Casual_Shirts_799d69af-f0d2-44f6-846e-f93739ff75f1.webp);">
       </div>
     </div>
 
     <div class="carousel-slide">
-      <div class="banner" style="background-image: url(./assets/images/336.PNG);">
-        <!-- <div class="text-wrapper">
-          <div class="overlay-text">
-            <h3 class="first-text">DESIGN & INNOVATE</h3>
-          </div>
-          <button class="second-text">View Collection</button>
-        </div> -->
-      </div>
+      <div class="banner" style="background-image: url(./assets/images/T-Shirts_870181e7-b846-46be-99d2-589dabe93060.webp);"></div>
+      <div class="banner1" style="background-image: url(./assets/images/T-Shirts_bdfa48a7-f049-4bb8-b137-5082cea9c4df.webp);"></div>
+    </div>
+    <div class="carousel-slide">
+      <div class="banner" style="background-image: url(./assets/images/Tehwar_Collection_4eb286f9-ef0d-4c6d-9fb6-a5286fb45902.webp);"></div>
+      <div class="banner1" style="background-image: url(./assets/images/Tehwar_Collection_024312a9-6308-41fb-a136-31ea119cacfd.webp);"></div>
+    </div>
+    <div class="carousel-slide">
+      <div class="banner" style="background-image: url(./assets/images/Main_f06f71a3-efad-4403-b903-02cf987fc7d2.webp);"></div>
+      <div class="banner1" style="background-image: url(./assets/images/Main_3af6079b-5ac8-47ec-b79d-12afd2e2897d.webp);"></div>
     </div>
 
     <!-- Navigation buttons -->
@@ -88,12 +87,14 @@
     <button class="next"><img src="./assets/images/right-arrow-angle.png" alt="right-arrow" style="width: 20px;height: 20px;margin-left: 3px;"></button>
     <div class="pagination"></div>
   </div>
-</div>
+ 
+
+<!-- </div> -->
 
 <!-- Products--Cards   -->
 <div class="section">
   <h2 class="section-title1">Means Wears</h2>
-  <hr class="line1">
+  <!-- <hr class="line1"> -->
   <hr style="border:1px solid black; margin-top: -8px;">
   
   <div class="products" id="productsContainer">
@@ -237,7 +238,23 @@
   </footer>
 </body>
 <!-- Header-heading-script --Start-->
- 
+<script>
+  const searchToggle = document.getElementById("searchToggle");
+const searchClose = document.getElementById("searchClose");
+const searchOverlay = document.getElementById("searchOverlay");
+const header = document.querySelector(".header");
+
+searchToggle.addEventListener("click", () => {
+  searchOverlay.classList.add("active");
+  header.classList.add("search-open");
+  document.getElementById("searchInput").focus();
+});
+
+searchClose.addEventListener("click", () => {
+  searchOverlay.classList.remove("active");
+  header.classList.remove("search-open");
+});
+</script>
 <script>
 const items = document.querySelectorAll('.slide-item');
 const container = document.querySelector('.header-front');
@@ -420,109 +437,109 @@ showSlide(currentIndex);
 <script>
 const products = [
   {
-    imgMain: "./assets/images/67.png",
+    imgMain: "./assets/images/SK251215-GR_1.webp",
     title: "Grey Sovereign Shalwar Kameez",
     price: "Rs.8,950",
     sizes: ["S","M","XL"]
   },
   {
-    imgMain: "./assets/images/60.png",
+    imgMain: "./assets/images/SK251214-SKY_2.webp",
     title: "Sky Blue Heritage Shalwar Kameez",
     price: "Rs.8,950",
     sizes: ["S","M","XL"]
   },
   {
-    imgMain: "./assets/images/67.png",
+    imgMain: "./assets/images/SK251112-NY_2.webp",
     title: "Grey Sovereign Shalwar Kameez",
     price: "Rs.8,950",
     sizes: ["S","M","XL"]
   },
   {
-    imgMain: "./assets/images/60.png",
+    imgMain: "./assets/images/RWC251103-KHI_2.webp",
     title: "Sky Blue Heritage Shalwar Kameez",
     price: "Rs.8,950",
     sizes: ["S","M","XL"]
   },
   {
-    imgMain: "./assets/images/60.png",
+    imgMain: "./assets/images/RWC251103-KHI_2.webp",
     title: "Sky Blue Heritage Shalwar Kameez",
     price: "Rs.8,950",
     sizes: ["S","M","XL"]
   },
   {
-    imgMain: "./assets/images/67.png",
+    imgMain: "./assets/images/SK251112-NY_2.webp",
     title: "Grey Sovereign Shalwar Kameez",
     price: "Rs.8,950",
     sizes: ["S","M","XL"]
   },
   {
-    imgMain: "./assets/images/60.png",
+    imgMain: "./assets/images/SK251214-SKY_2.webp",
     title: "Sky Blue Heritage Shalwar Kameez",
     price: "Rs.8,950",
     sizes: ["S","M","XL"]
   },
   {
-    imgMain: "./assets/images/67.png",
+    imgMain: "./assets/images/SK251215-GR_1.webp",
     title: "Grey Sovereign Shalwar Kameez",
     price: "Rs.8,950",
     sizes: ["S","M","XL"]
   },
   {
-    imgMain: "./assets/images/60.png",
+    imgMain: "./assets/images/SK251215-GR_1.webp",
     title: "Sky Blue Heritage Shalwar Kameez",
     price: "Rs.8,950",
     sizes: ["S","M","XL"]
   },
   {
-    imgMain: "./assets/images/67.png",
+   imgMain: "./assets/images/SK251215-GR_1.webp",
     title: "Grey Sovereign Shalwar Kameez",
     price: "Rs.8,950",
     sizes: ["S","M","XL"]
   },
   {
-    imgMain: "./assets/images/60.png",
+    imgMain: "./assets/images/RWC251103-KHI_2.webp",
     title: "Sky Blue Heritage Shalwar Kameez",
     price: "Rs.8,950",
     sizes: ["S","M","XL"]
   },
   {
-    imgMain: "./assets/images/67.png",
+    imgMain: "./assets/images/RWC251103-KHI_2.webp",
     title: "Grey Sovereign Shalwar Kameez",
     price: "Rs.8,950",
     sizes: ["S","M","XL"]
   },
   {
-    imgMain: "./assets/images/60.png",
+    imgMain: "./assets/images/SK251112-NY_2.webp",
     title: "Sky Blue Heritage Shalwar Kameez",
     price: "Rs.8,950",
     sizes: ["S","M","XL"]
   },
   {
-    imgMain: "./assets/images/60.png",
+    imgMain: "./assets/images/SK251112-NY_2.webp",
     title: "Sky Blue Heritage Shalwar Kameez",
     price: "Rs.8,950",
     sizes: ["S","M","XL"]
   },
   {
-    imgMain: "./assets/images/67.png",
+    imgMain: "./assets/images/SK251215-GR_1.webp",
     title: "Grey Sovereign Shalwar Kameez",
     price: "Rs.8,950",
     sizes: ["S","M","XL"]
   },
   {
-    imgMain: "./assets/images/60.png",
+    imgMain: "./assets/images/SK251215-GR_1.webp",
     title: "Sky Blue Heritage Shalwar Kameez",
     price: "Rs.8,950",
     sizes: ["S","M","XL"]
   },
   {
-    imgMain: "./assets/images/67.png",
+    imgMain: "./assets/images/SK251214-SKY_2.webp",
     title: "Grey Sovereign Shalwar Kameez",
     price: "Rs.8,950",
     sizes: ["S","M","XL"]
   },
   {
-    imgMain: "./assets/images/60.png",
+    imgMain: "./assets/images/SK251214-SKY_2.webp",
     title: "Sky Blue Heritage Shalwar Kameez",
     price: "Rs.8,950",
     sizes: ["S","M","XL"]
@@ -806,16 +823,24 @@ setTimeout(updateProgress, 80);
     return 4;
   }
 
+  // function setCardSizes() {
+  //   const pct = 100 / visible;
+  //   cards.forEach(c => {
+  //     c.style.width = pct + 'vw';
+  //     if (visible === 1)      c.style.height = '110vw';
+  //     else if (visible === 2) c.style.height = '70vw';
+  //     else                    c.style.height = '360px';
+  //   });
+  // }
   function setCardSizes() {
-    // Each card width = 100/visible % of the VIEWPORT (track is 100vw wide)
-    const pct = 100 / visible;
-    cards.forEach(c => {
-      c.style.width = pct + 'vw';
-      if (visible === 1)      c.style.height = '110vw';
-      else if (visible === 2) c.style.height = '70vw';
-      else                    c.style.height = '360px';
-    });
-  }
+  const pct = 100 / visible;
+  cards.forEach(c => {
+    c.style.width = pct + 'vw';
+    if (visible === 1)      c.style.height = '110vw';
+    else if (visible === 2) c.style.height = '70vw';
+   else c.style.height = 'clamp(450px, 30vw, 700px)';
+  });
+}
 
   function totalSlides() {
     return Math.ceil(TOTAL / visible);
