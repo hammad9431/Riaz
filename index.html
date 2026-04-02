@@ -20,7 +20,7 @@
   <div class="header-main">
     <div class="logo">
       <a href="./index.html">
-        <img src="./assets/images/mainlogo-removebg-preview (2).png" alt="Logo">
+        <img src="./assets/images/Logo main .png" alt="Logo">
       </a>
     </div>
      <button class="menu-toggle" id="menuToggle">☰</button>
@@ -243,7 +243,8 @@
 
   </footer>
 </body>
-<!-- Header-heading-script --Start-->
+
+ <!-- --Search--Bar--Toggle--Start-- -->
 <script>
   const searchToggle = document.getElementById("searchToggle");
 const searchClose = document.getElementById("searchClose");
@@ -261,6 +262,9 @@ searchClose.addEventListener("click", () => {
   header.classList.remove("search-open");
 });
 </script>
+<!-- --Search--Bar--Toggle--End-- -->
+
+<!-- Header-heading-script --Start-->
 <script>
 const items = document.querySelectorAll('.slide-item');
 const container = document.querySelector('.header-front');
@@ -305,27 +309,80 @@ window.addEventListener('load', () => {
     }
 });
 
+// window.addEventListener('scroll', () => {
+//     let currentScroll = window.pageYOffset;
+
+//    if (currentScroll > lastScroll) {
+//     // scroll down
+//     container.classList.add('header-hidden');
+//     mainHeader.classList.remove('hide-bottom', 'show');
+//     mainHeader.classList.add('hide-top');
+//     setTimeout(() => { mainHeader.classList.add('show'); }, 10);
+
+//     triggerHeaderAnim('down'); 
+// }
+
+// if (currentScroll === 0) {
+//     container.classList.remove('header-hidden');
+//     mainHeader.classList.remove('hide-top', 'animate-from-top', 'animate-from-bottom');
+//     mainHeader.classList.add('show');
+//     mainHeader.style.top = currentHeight + "px";
+
+//     triggerHeaderAnim('up'); 
+// }
+//     lastScroll = currentScroll;
+// });
+// window.addEventListener('scroll', () => {
+//     let currentScroll = window.pageYOffset;
+
+//     if (currentScroll > lastScroll) {
+//         // 🔽 Scroll Down → Hide
+//         container.classList.add('header-hidden');
+
+//         mainHeader.classList.remove('show');
+//         mainHeader.classList.add('hide-top');
+
+//         mainHeader.style.top = "0px";
+//     } else {
+//         // 🔼 Scroll Up → Show
+//         container.classList.remove('header-hidden');
+
+//         mainHeader.classList.remove('hide-top');
+//         mainHeader.classList.add('show');
+
+//         mainHeader.style.top = currentHeight + "px";
+//     }
+
+//     lastScroll = currentScroll;
+// });
+
 window.addEventListener('scroll', () => {
     let currentScroll = window.pageYOffset;
 
-   if (currentScroll > lastScroll) {
-    // scroll down
-    container.classList.add('header-hidden');
-    mainHeader.classList.remove('hide-bottom', 'show');
-    mainHeader.classList.add('hide-top');
-    setTimeout(() => { mainHeader.classList.add('show'); }, 10);
+    // 🔽 Scroll Down → Hide both
+    if (currentScroll > lastScroll) {
+        container.classList.add('header-hidden');
 
-    triggerHeaderAnim('down'); 
-}
+        mainHeader.classList.remove('show');
+        mainHeader.classList.add('hide-top');
+        mainHeader.style.top = "0px";
+    }
 
-if (currentScroll === 0) {
-    container.classList.remove('header-hidden');
-    mainHeader.classList.remove('hide-top', 'animate-from-top', 'animate-from-bottom');
-    mainHeader.classList.add('show');
-    mainHeader.style.top = currentHeight + "px";
+    // 🔼 Scroll Up → Sirf main header show (front hidden hi rahe)
+    else {
+        mainHeader.classList.remove('hide-top');
+        mainHeader.classList.add('show');
+        mainHeader.style.top = "0px";
 
-    triggerHeaderAnim('up'); 
-}
+        container.classList.add('header-hidden'); // 👈 important
+    }
+
+    // 🔝 Only when FULL TOP
+    if (currentScroll === 0) {
+        container.classList.remove('header-hidden'); // 👈 show now
+        mainHeader.style.top = currentHeight + "px";
+    }
+
     lastScroll = currentScroll;
 });
 let animTimeout = null;
