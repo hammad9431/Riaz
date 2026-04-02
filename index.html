@@ -412,14 +412,33 @@ slides.forEach((_, index) => {
 
 const dots = document.querySelectorAll(".dot");
 
+// function showSlide(index) {
+//   slides.forEach(slide => slide.classList.remove("active"));
+//   dots.forEach(dot => dot.classList.remove("active"));
+
+//   slides[index].classList.add("active");
+//   dots[index].classList.add("active");
+// }
 function showSlide(index) {
-  slides.forEach(slide => slide.classList.remove("active"));
+  // Pehle wali slide ko prev-slide class do
+  slides.forEach(slide => {
+    if (slide.classList.contains("active")) {
+      slide.classList.add("prev-slide");
+      slide.classList.remove("active");
+
+      // Animation khatam hone ke baad prev-slide remove karo
+      setTimeout(() => {
+        slide.classList.remove("prev-slide");
+      }, 600);
+    }
+  });
+  // Dots update karo
   dots.forEach(dot => dot.classList.remove("active"));
 
+  // Nai slide active karo
   slides[index].classList.add("active");
   dots[index].classList.add("active");
 }
-
 // next / prev
 function nextSlide() {
   currentIndex = (currentIndex + 1) % slides.length;
@@ -645,9 +664,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <script>
 const shirts = [
-  { img: './assets/images/60.png', name: 'Navy Prestige Casual Shirt', price: 'Rs.4,250', sizes: ["S","M","XL"]},
-  { img: './assets/images/60.png', name: 'Grey Formal Shirt', price: 'Rs.3,800', sizes: ["S","M","XL"]},
-  { img: './assets/images/60.png', name: 'White Slim Fit Shirt', price: 'Rs.4,100', sizes: ["S","M","XL"]},
+  { img: './assets/images/60.png', name: 'Green Formal Shirt', price: 'Rs.4,250', sizes: ["S","M","XL"]},
+  { img: './assets/images/61.png', name: 'Grey Formal Shirt', price: 'Rs.3,800', sizes: ["S","M","XL"]},
+  { img: './assets/images/60.png', name: 'White Formal shirt', price: 'Rs.4,100', sizes: ["S","M","XL"]},
   { img: './assets/images/60.png', name: 'Black Classic Shirt', price: 'Rs.3,900', sizes: ["S","M","XL"]},
   { img: './assets/images/60.png', name: 'Blue Checked Shirt', price: 'Rs.4,200', sizes: ["S","M","XL"]},
   { img: './assets/images/60.png', name: 'Olive Casual Shirt', price: 'Rs.4,000', sizes: ["S","M","XL"]},
